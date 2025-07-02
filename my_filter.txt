@@ -31,6 +31,8 @@ youtube.com###expandable-metadata:has-text("AI-generated video summary")
 ! Hide Survey "What did you think of this video" rows
 youtube.com##ytd-inline-survey-renderer
 
+! Remove "Auto-dubbed" videos
+youtube.com##yt-lockup-view-model.lockup.ytd-item-section-renderer:has-text(Auto-dubbed)
 
 ! Hide the "Chat replay is disabled for this premire" box
 youtube.com##ytd-message-renderer.ytd-live-chat-frame.style-scope:has-text("Chat replay")
