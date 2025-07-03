@@ -6,7 +6,12 @@ www.youtube.com##ytd-rich-grid-renderer:style(--ytd-rich-grid-items-per-row: 4 !
 ! Remove annoying UI stuff
 youtube.com###teaser-carousel
 www.youtube.com###video-preview-container
+
+
+! Hide OverLays (2025-07-03 New Site Style, adding filter)
 youtube.com###hover-overlays
+youtube.com##yt-thumbnail-hover-overlay-toggle-actions-view-model
+
 
 ! Hide the miniplayer pop up
 www.youtube.com##ytd-miniplayer
