@@ -30,8 +30,12 @@ youtube.com##.lockup.ytd-item-section-renderer:has-text("Mix - ")
 youtube.com##.lockup.ytd-item-section-renderer:has-text("My Mix")
 
 
-! Hide the AI summary text box that appears on some videos next to description
+!! AI Garbage
+! Remove the AI generated summary
 youtube.com###expandable-metadata:has-text("AI-generated video summary")
+! Remove the 'Ask' button
+youtube.com##button-view-model > button:has(div.yt-spec-button-shape-next__button-text-content:has-text(Ask))
+
 
 ! Hide Survey "What did you think of this video" rows
 youtube.com##ytd-inline-survey-renderer
