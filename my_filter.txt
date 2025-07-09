@@ -12,6 +12,9 @@ www.youtube.com###video-preview-container
 youtube.com###hover-overlays
 youtube.com##yt-thumbnail-hover-overlay-toggle-actions-view-model
 
+! Hide search suggestions drop downs
+||suggestqueries-clients*.youtube.com/complete/search^
+
 
 ! Hide the miniplayer pop up
 www.youtube.com##ytd-miniplayer
