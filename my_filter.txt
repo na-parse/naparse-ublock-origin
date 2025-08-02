@@ -33,6 +33,8 @@ youtube.com##ytd-item-section-renderer:has-text("View full playlist")
 youtube.com##.lockup.ytd-item-section-renderer:has-text("Mix - ")
 youtube.com##.lockup.ytd-item-section-renderer:has-text("My Mix")
 
+! Videos from Non-Subscribed Channels showing up now, gross
+youtube.com##ytd-rich-item-renderer:has(yt-avatar-stack-view-model[aria-label*="Collaboration"])
 
 !! AI Garbage
 ! Remove the AI generated summary
