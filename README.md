@@ -9,6 +9,7 @@ This is a repo to track and publish my personal uBlock Origin filter configurati
 - Remove the overlay in-thumbnail buttons
 - No miniplayer (only hides it, can still cause interactivity issues)
 - Did I mention no shorts?!
+- Removes Auto-Dubbed videos from home, suggestions, etc
 
 
 ## Original Credit
