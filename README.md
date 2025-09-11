@@ -10,7 +10,7 @@ This is a repo to track and publish my personal uBlock Origin filter configurati
 - No miniplayer (only hides it, can still cause interactivity issues)
 - Did I mention no shorts?!
 - Removes Auto-Dubbed videos from home, suggestions, etc
-
+  - YT keeps changing the div class names for the auto-dub badges, trying to stay on top of it but they keep coming back.
 
 ## Original Credit
 
