@@ -50,6 +50,8 @@ youtube.com##ytd-inline-survey-renderer
 youtube.com##yt-lockup-view-model.lockup.ytd-item-section-renderer:has-text(Auto-dubbed)
 youtube.com##ytd-rich-item-renderer:has(.ytd-badge-supported-renderer:has-text(Auto-dubbed))
 youtube.com##ytd-rich-item-renderer:has(div.badge-shape-wiz__text:has-text(Auto-dubbed))
+! They changed the badge div name, including both for now to catch A-B testing
+youtube.com##ytd-rich-item-renderer:has(div.yt-badge-shape__text:has-text('Auto-dubbed'))
 
 ! Hide the "Chat replay is disabled for this premire" box
 youtube.com##ytd-message-renderer.ytd-live-chat-frame.style-scope:has-text("Chat replay")
