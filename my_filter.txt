@@ -106,6 +106,15 @@ youtube.com##ytd-shelf-renderer.ytd-item-section-renderer.style-scope > .ytd-she
 
 
 
+!! 2025-10 New UI Garbage fixes
+! Mostly via https://www.reddit.com/user/AchernarB/
+youtube.com##+js(ra, enable-color-sampling, ytd-watch-metadata[enable-color-sampling], stay)
+youtube.com##+js(aeld, /^mouse(enter|leave)$/, , elements, #description)
+youtube.com##.html5-video-player.ended-mode .ytp-fullscreen-grid
+youtube.com##.html5-video-player.ended-mode.ytp-autonav-endscreen-cancelled-state .html5-endscreen:style( display: block !important; )
+youtube.com##.html5-video-player.ytp-fullscreen.ended-mode.ytp-autonav-endscreen-cancelled-state .html5-endscreen:style( top: 48px !important; )
+
+
 !! Non-Youtube stuff
 
 ! Get rid of sites prompting to "Login with Google" unprompted
