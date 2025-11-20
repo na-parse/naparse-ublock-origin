@@ -44,6 +44,10 @@ youtube.com##button-view-model > button:has(div.yt-spec-button-shape-next__butto
 ! 2025-08-10 They're testing a freaking AI chat box in the middle of the home page?!
 youtube.com##ytd-rich-section-renderer:has(yt-talk-to-recs-view-model)
 
+! Hide "Explore more topics" panel on home page
+youtube.com##ytd-rich-section-renderer:has-text("Explore more topics")
+
+
 ! Hide Survey "What did you think of this video" rows
 youtube.com##ytd-inline-survey-renderer
 
