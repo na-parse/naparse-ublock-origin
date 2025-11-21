@@ -1,16 +1,19 @@
-!! Youtube Management
+!!! -- Youtube Management
 
-! Big thumbnails suck - set to # of thumbnails to show per line in grid view
+! Adjust video thumbnail size on home feed / subscription page 
 www.youtube.com##ytd-rich-grid-renderer:style(--ytd-rich-grid-items-per-row: 4 !important;)
+! Remove empty spaces in grid
+youtube.com##ytd-rich-grid-row,#contents.ytd-rich-grid-row:style(display: contents !important)
 
 ! Remove annoying UI stuff
 youtube.com###teaser-carousel
 youtube.com###video-preview-container
 
-! Block Playables on the homepage
+! Block Playables
 youtube.com##ytd-rich-section-renderer:has([title^="YouTube Playables"])
+youtube.com##yt-tab-shape:has-text(Playables)
 
-! Hide OverLays (2025-07-03 New Site Style, adding filter)
+! Hide Thumbnail Control OverLays (2025-07-03 New Site Style, adding filter)
 youtube.com###hover-overlays
 youtube.com##yt-thumbnail-hover-overlay-toggle-actions-view-model
 
@@ -47,11 +50,10 @@ youtube.com##ytd-rich-section-renderer:has(yt-talk-to-recs-view-model)
 ! Hide "Explore more topics" panel on home page
 youtube.com##ytd-rich-section-renderer:has-text("Explore more topics")
 
-
 ! Hide Survey "What did you think of this video" rows
 youtube.com##ytd-inline-survey-renderer
 
-!!! Remove "Auto-dubbed" videos
+!! Remove "Auto-dubbed" videos
 youtube.com##yt-lockup-view-model.lockup.ytd-item-section-renderer:has-text(Auto-dubbed)
 youtube.com##ytd-rich-item-renderer:has(.ytd-badge-supported-renderer:has-text(Auto-dubbed))
 youtube.com##ytd-rich-item-renderer:has(div.badge-shape-wiz__text:has-text(Auto-dubbed))
@@ -65,52 +67,7 @@ youtube.com##ytd-message-renderer.ytd-live-chat-frame.style-scope:has-text("Chat
 youtube.com##ytd-shelf-renderer:has-text('From health sources')
 youtube.com###clarify-box
 
-
-! Hide all videos containing the phrase "#shorts"
-youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(#shorts))
-youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(#Shorts))
-youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(#short))
-youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(#Short))
-
-! Hide all videos with the shorts indicator on the thumbnail
-youtube.com##ytd-grid-video-renderer:has([overlay-style="SHORTS"])
-youtube.com##ytd-rich-item-renderer:has([overlay-style="SHORTS"])
-youtube.com##ytd-video-renderer:has([overlay-style="SHORTS"])
-youtube.com##ytd-item-section-renderer.ytd-section-list-renderer[page-subtype="subscriptions"]:has(ytd-video-renderer:has([overlay-style="SHORTS"]))
-
-! Hide shorts button in sidebar
-youtube.com##ytd-guide-entry-renderer:has-text(Shorts)
-youtube.com##ytd-mini-guide-entry-renderer:has-text(Shorts)
-
-! Hide shorts section on homepage
-youtube.com##ytd-rich-section-renderer:has(#rich-shelf-header:has-text(Shorts))
-youtube.com##ytd-reel-shelf-renderer:has(.ytd-reel-shelf-renderer:has-text(Shorts))
-
-! Hide shorts on the search results page
-youtube.com##ytd-item-section-renderer:has(h2:has-text(Shorts))
-
-! Hide shorts tab on channel pages
-! Old style
-youtube.com##tp-yt-paper-tab:has(.tp-yt-paper-tab:has-text(Shorts))
-! New style (2023-10)
-youtube.com##yt-tab-shape:has-text(/^Shorts$/)
-youtube.com##yt-tab-shape:has-text(Playables)
-
-! Hide shorts in video descriptions
-youtube.com##ytd-reel-shelf-renderer.ytd-structured-description-content-renderer:has-text("Shorts remixing this video")
-
-! Remove empty spaces in grid
-youtube.com##ytd-rich-grid-row,#contents.ytd-rich-grid-row:style(display: contents !important)
-
-!!! Experimental section -- Needs further work
-
-! Remove search unrelated sections from search results
-youtube.com##ytd-shelf-renderer.ytd-item-section-renderer.style-scope > .ytd-shelf-renderer.style-scope:has-text("Previously watched")
-youtube.com##ytd-shelf-renderer.ytd-item-section-renderer.style-scope > .ytd-shelf-renderer.style-scope:has-text("Explore more")
-
-
-
-!! 2025-10 New UI Garbage fixes - mostly via https://www.reddit.com/user/AchernarB/
+!! Revert the 2025 UI changes - mostly via https://www.reddit.com/user/AchernarB/
 ! Remove mouseover background from description boxes
 youtube.com##+js(ra, enable-color-sampling, ytd-watch-metadata[enable-color-sampling], stay)
 youtube.com##+js(aeld, /^mouse(enter|leave)$/, , elements, #description)
@@ -122,8 +79,50 @@ youtube.com##.html5-video-player.ended-mode.ytp-autonav-endscreen-cancelled-stat
 youtube.com##.html5-video-player.ytp-fullscreen.ended-mode.ytp-autonav-endscreen-cancelled-state .html5-endscreen:style( top: 48px !important; )
 
 
+!! Shorts can go DIAF
+! Hide all videos containing the phrase "#shorts"
+youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(#shorts))
+youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(#Shorts))
+youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(#short))
+youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(#Short))
+! Hide all videos with the shorts indicator on the thumbnail
+youtube.com##ytd-grid-video-renderer:has([overlay-style="SHORTS"])
+youtube.com##ytd-rich-item-renderer:has([overlay-style="SHORTS"])
+youtube.com##ytd-video-renderer:has([overlay-style="SHORTS"])
+youtube.com##ytd-item-section-renderer.ytd-section-list-renderer[page-subtype="subscriptions"]:has(ytd-video-renderer:has([overlay-style="SHORTS"]))
+! Hide shorts button in sidebar
+youtube.com##ytd-guide-entry-renderer:has-text(Shorts)
+youtube.com##ytd-mini-guide-entry-renderer:has-text(Shorts)
+! Hide shorts section on homepage
+youtube.com##ytd-rich-section-renderer:has(#rich-shelf-header:has-text(Shorts))
+youtube.com##ytd-reel-shelf-renderer:has(.ytd-reel-shelf-renderer:has-text(Shorts))
+! Hide shorts on the search results page
+youtube.com##ytd-item-section-renderer:has(h2:has-text(Shorts))
+! Hide shorts tab on channel pages
+youtube.com##tp-yt-paper-tab:has(.tp-yt-paper-tab:has-text(Shorts))
+youtube.com##yt-tab-shape:has-text(/^Shorts$/)
+! Hide shorts in video descriptions
+youtube.com##ytd-reel-shelf-renderer.ytd-structured-description-content-renderer:has-text("Shorts remixing this video")
+
+
+!!! Experimental section -- Needs further work
+
+! Remove search unrelated sections from search results
+youtube.com##ytd-shelf-renderer.ytd-item-section-renderer.style-scope > .ytd-shelf-renderer.style-scope:has-text("Previously watched")
+youtube.com##ytd-shelf-renderer.ytd-item-section-renderer.style-scope > .ytd-shelf-renderer.style-scope:has-text("Explore more")
+
+
 !! Non-Youtube stuff
 
 ! Get rid of sites prompting to "Login with Google" unprompted
 ! This only affects the site popups, standard auth flows still work
 ||accounts.google.com/gsi/*$xhr,script,3p
+
+! Reddit garbage
+reddit.com##faceplate-tracker[noun="games_drawer"]
+
+
+! Amazon is forcing their AI rufus garbage on everyone(me) now... Aurgh
+amazon.com##.rufus-panel-container
+amazon.com##.nav-rufus-disco
+amazon.com##.s-ask-rufus-mshop-suggestion-container
