@@ -4,6 +4,9 @@
 www.youtube.com##ytd-rich-grid-renderer:style(--ytd-rich-grid-items-per-row: 4 !important;)
 ! Remove empty spaces in grid
 youtube.com##ytd-rich-grid-row,#contents.ytd-rich-grid-row:style(display: contents !important)
+! They're introduce algorithmic feeds IN SUBSCRIPTIONS.  Disgusting
+youtube.com##ytd-rich-section-renderer:has(span#title:contains("Most relevant"))
+
 
 ! Remove annoying UI stuff
 youtube.com###teaser-carousel
@@ -128,3 +131,27 @@ reddit.com##faceplate-tracker[noun="games_drawer"]
 amazon.com##.rufus-panel-container
 amazon.com##.nav-rufus-disco
 amazon.com##.s-ask-rufus-mshop-suggestion-container
+
+! Testing updated Rufus Block via WLPvoip on reddit
+! https://www.reddit.com/r/amazonprime/comments/1ps5xv6/disable_rufus_autoflyout_on_chrome_with_ublock/
+amazon.com##div#nav-flyout-rufus:remove()
+amazon.com##div[class*="s-desktop-content"]:style(padding-top: 0;)
+amazon.com##body[class*="rufus-docked"]:style(padding-left: 0 !important; padding-right: 0 !important;)
+amazon.com##.nav-rufus-content
+amazon.com##.nav-rufus-disco
+amazon.com##.nav-rufus-disconav-flyout-rufus
+amazon.com##.rufus-view-filler
+amazon.com##.rufus-conversation-container-inner
+amazon.com##.rufus-conversation-container
+amazon.com##.rufus-container-peek-view
+amazon.com##.rufus-panel-header-right-section
+amazon.com##.rufus-panel-header-content-row
+amazon.com##.rufus-panel-header-container
+amazon.com##.rufus-panel-container
+amazon.com##.rufus-container-default-text-style.rufus-container
+amazon.com##.rufus-panel-closed-to-peek.rufus-panel-container
+
+
+# Other website stuff
+www.mrcooper.com###standard_banner-root
+
