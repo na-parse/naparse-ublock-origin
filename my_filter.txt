@@ -4,8 +4,8 @@
 www.youtube.com##ytd-rich-grid-renderer:style(--ytd-rich-grid-items-per-row: 4 !important;)
 ! Remove empty spaces in grid
 youtube.com##ytd-rich-grid-row,#contents.ytd-rich-grid-row:style(display: contents !important)
-! They're introduce algorithmic feeds IN SUBSCRIPTIONS.  Disgusting
-youtube.com##ytd-rich-section-renderer:has(span#title:contains("Most relevant"))
+! Eliminate algorithmic section panels in subscription page feed
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-rich-section-renderer
 
 
 ! Remove annoying UI stuff
