@@ -47,8 +47,10 @@ youtube.com##ytd-rich-item-renderer:has(yt-avatar-stack-view-model[aria-label*="
 youtube.com###expandable-metadata:has-text("AI-generated video summary")
 ! New embedded AI summary in the description
 youtube.com###video-summary
-! Remove the 'Ask' button
+! Remove the 'Ask' button / New Ask button version
 youtube.com##button-view-model > button:has(div.yt-spec-button-shape-next__button-text-content:has-text(Ask))
+youtube.com##yt-button-view-model.ytd-menu-renderer:has(div.ytSpecButtonShapeNextButtonTextContent:has-text(/^Ask$/))
+
 ! 2025-08-10 They're testing a freaking AI chat box in the middle of the home page?!
 youtube.com##ytd-rich-section-renderer:has(yt-talk-to-recs-view-model)
 
