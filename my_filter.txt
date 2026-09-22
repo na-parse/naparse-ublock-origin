@@ -4,9 +4,8 @@
 www.youtube.com##ytd-rich-grid-renderer:style(--ytd-rich-grid-items-per-row: 4 !important;)
 ! Remove empty spaces in grid
 youtube.com##ytd-rich-grid-row,#contents.ytd-rich-grid-row:style(display: contents !important)
-! Eliminate algorithmic section panels in subscription page feed
+! They're introduce algorithmic feeds IN SUBSCRIPTIONS.  Disgusting
 www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-rich-section-renderer
-
 
 ! Remove annoying UI stuff
 youtube.com###teaser-carousel
@@ -16,9 +15,12 @@ youtube.com###video-preview-container
 youtube.com##ytd-rich-section-renderer:has([title^="YouTube Playables"])
 youtube.com##yt-tab-shape:has-text(Playables)
 
-! Hide Thumbnail Control OverLays (2025-07-03 New Site Style, adding filter)
+! Hide Thumbnail Control OverLays
 youtube.com###hover-overlays
 youtube.com##yt-thumbnail-hover-overlay-toggle-actions-view-model
+
+! Hide new New badge on watch next video thumbnails
+youtube.com##yt-thumbnail-overlay-badge-view-model:has(badge-shape[aria-label="New"])
 
 ! Hide search suggestions drop downs
 ||suggestqueries-clients*.youtube.com/complete/search^
@@ -43,11 +45,11 @@ youtube.com##.lockup.ytd-item-section-renderer:has-text("My Mix")
 youtube.com##ytd-rich-item-renderer:has(yt-avatar-stack-view-model[aria-label*="Collaboration"])
 
 !! AI Garbage
-! Remove the AI generated summary
+! Remove the AI generated summary (all verisons)
 youtube.com###expandable-metadata:has-text("AI-generated video summary")
-! New embedded AI summary in the description
 youtube.com###video-summary
-! Remove the 'Ask' button / New Ask button version
+
+! Remove the 'Ask' button
 youtube.com##button-view-model > button:has(div.yt-spec-button-shape-next__button-text-content:has-text(Ask))
 youtube.com##yt-button-view-model.ytd-menu-renderer:has(div.ytSpecButtonShapeNextButtonTextContent:has-text(/^Ask$/))
 
@@ -56,6 +58,9 @@ youtube.com##ytd-rich-section-renderer:has(yt-talk-to-recs-view-model)
 
 ! Hide "Explore more topics" panel on home page
 youtube.com##ytd-rich-section-renderer:has-text("Explore more topics")
+
+! Hide the "Related Content" carousel - it's already an algo feed idiots
+youtube.com###content-wrapper
 
 ! Hide Survey "What did you think of this video" rows
 youtube.com##ytd-inline-survey-renderer
@@ -154,6 +159,8 @@ amazon.com##.rufus-container-default-text-style.rufus-container
 amazon.com##.rufus-panel-closed-to-peek.rufus-panel-container
 
 
-# Other website stuff
-www.mrcooper.com###standard_banner-root
+! Additional global filters of limited value
+###standard_banner-root
+##.theme--dark.v-system-bar--fixed.v-system-bar
+
 
