@@ -12,6 +12,19 @@ This is a repo to track and publish my personal uBlock Origin filter configurati
 - Removes Auto-Dubbed videos from home, suggestions, etc
   - YT keeps changing the div class names for the auto-dub badges, trying to stay on top of it but they keep coming back.
 
+## Additionals
+
+### Google
+
+- Block the "sign in with Google" pop up.
+
+Sign in with google still works, just less unnecessary modal overlays getting
+in your way.
+
+### Amazon
+
+Fuck that Rufus garbage.  For real.  Doing my best to keep it out of the browser.
+
 ## Original Credit
 
 Originated as a copy paste of `gijsdev`'s repository: `https://github.com/gijsdev/ublock-hide-yt-shorts`
