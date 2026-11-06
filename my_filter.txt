@@ -55,6 +55,9 @@ youtube.com###video-summary
 ! Remove the 'Ask' button
 youtube.com##button-view-model > button:has(div.yt-spec-button-shape-next__button-text-content:has-text(Ask))
 youtube.com##yt-button-view-model.ytd-menu-renderer:has(div.ytSpecButtonShapeNextButtonTextContent:has-text(/^Ask$/))
+! 2026-11 Text label dropped, now icon-only (sparkle SVG) with aria-label
+youtube.com##yt-button-view-model:has(.you-chat-entrypoint-button)
+youtube.com##yt-button-view-model:has(button[aria-label="Ask"])
 
 ! 2025-08-10 They're testing a freaking AI chat box in the middle of the home page?!
 youtube.com##ytd-rich-section-renderer:has(yt-talk-to-recs-view-model)
