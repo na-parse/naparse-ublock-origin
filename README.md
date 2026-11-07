@@ -12,6 +12,13 @@ This is a repo to track and publish my personal uBlock Origin filter configurati
 - Removes Auto-Dubbed videos from home, suggestions, etc
   - YT keeps changing the div class names for the auto-dub badges, trying to stay on top of it but they keep coming back.
 
+### What it looks like...
+
+The home page:
+![The youtube homepage without all the dumb shorts and other annoying garbage](youtube-homepage-with-filters.png)
+
+... The subscription page looks like that too, just with your subscriptions.
+
 ## Additionals
 
 ### Google
